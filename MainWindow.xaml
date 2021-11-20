@@ -1,0 +1,23 @@
+﻿<Window x:Class="SongsParcer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SongsParcer"
+        mc:Ignorable="d"
+        Title="Songs Parser" Height="450" Width="auto">
+
+
+
+        <ListView Name="songList" ScrollViewer.CanContentScroll="True" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=SongName}" Width="auto">Song</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Artist}" Width="auto">Artist</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Year}" Width="auto">Year</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Genre}" Width="auto">Genre</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+</Window>
